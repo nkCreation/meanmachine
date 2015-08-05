@@ -1,0 +1,14 @@
+html {
+  font-size: 10px;
+}
+
+.container {
+  width: 120rem;
+  margin: 0 auto;
+}
+
+header {
+  background: #607D8B;
+  padding: 1rem;
+  color: #fff;
+}
