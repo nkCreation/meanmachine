@@ -1,0 +1,32 @@
+
+<h1 class="md-display-3">Users <md-button class="md-fab" href="/users/create" aria-label="New user"><md-icon>add</md-icon></md-button></h1>
+
+<div class="loading" ng-show="user.processing">
+	<md-progress-circular md-mode="indeterminate"></md-progress-circular>
+	<p>Loading users...</p>
+</div>
+
+<table ng-show="user.users">
+	<thead>
+		<tr>
+			<th>_id</th>
+			<th>Name</th>
+			<th>Username</th>
+			<th class="action"></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr ng-repeat="person in user.users">
+			<td>{{ person._id }}</td>
+			<td>{{ person.name }}</td>
+			<td>{{ person.username }}</td>
+			<td class="action">
+				<div layout="row">				
+					<md-button class="md-icon-button" ng-href="/users/{{ person._id }}" aria-label="Edit user"><md-icon>edit</md-icon></md-button>
+					<md-button class="md-icon-button" ng-click="user.deleteUser(person._id)" aria-label="Delete user"><md-icon>delete</md-icon></md-button>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>

@@ -1,10 +1,23 @@
 // first style
 
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 $color1: #607D8B;
 $color2: #2196F3;
 
 html {
 	font-size: 10px;
+}
+
+body {
+	font-size: 1.6rem;
 }
 
 .container {
@@ -16,4 +29,8 @@ header {
 	background: $color1;
 	padding: 1rem;
 	color: #fff;
+}
+
+.spinner {
+	animation:spin 1s infinite;
 }

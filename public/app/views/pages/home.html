@@ -1,0 +1,10 @@
+<md-card>
+	<img src="assets/img/head.jpg" class="md-card-image" alt="image caption">
+	<md-card-content>
+		<h1 class="md-display-1">Welcome to the User CRM</h1>
+		<p>Login to manage your users</p>
+	</md-card-content>
+	<div class="md-actions" layout="row" layout-align="end center">
+		<md-button ng-if="!main.loggedIn" href="/login">Login</md-button>
+	</div>
+</md-card>
